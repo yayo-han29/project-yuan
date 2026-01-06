@@ -1,0 +1,33 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main()
+{
+	stack<int> number;
+	
+	number.push(5);
+	number.push(10);
+	number.push(15);
+	number.push(20);
+	number.push(25);
+	
+	number.pop();
+	number.pop();
+	
+	number.push(30);
+	number.push(35);
+	
+	stack<int> copy;
+	stack<int> temp = number;
+	
+	
+	cout << "Menampilkan Keseluruhan Elemen: " << endl;
+	while (!number.empty())
+	{
+		cout << number.top() << " ";
+		number.pop();
+	}
+	
+	return 0;
+}
