@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "Jumlah elemen: ";
+    cin >> n;
+
+    vector<int> angka(n);
+
+    // Input angka
+    cout << "Masukkan angkanya: ";
+    for (int i = 0; i < n; i++) {
+        cin >> angka[i];
+    }
+
+    cout << "\nElemen duplikat: ";
+    bool adaDuplikat = false;
+
+    // Cek duplikat 
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (angka[i] == angka[j]) {
+                cout << angka[i] << " ";
+                adaDuplikat = true;
+                break; 
+            }
+        }
+    }
+
+    if (!adaDuplikat) {
+        cout << "Tidak ada duplikat.";
+    }
+
+    cout << endl;
+    return 0;
+}
