@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double N1, N2, N3, T, L;
+
+    cout << "Masukkan tiga sisi segitiga: ";
+    cin >> N1 >> N2 >> N3;
+
+    // Cek apakah bisa membentuk segitiga
+    if ((N1 + N2 > N3) && (N1 + N3 > N2) && (N2 + N3 > N1)) {
+        T = (N1 + N2 + N3) / 2;
+        L = sqrt(T * (T - N1) * (T - N2) * (T - N3));
+        cout << "Luas segitiga = " << L << endl;
+    } else {
+        cout << "Nilai sisi tidak membentuk segitiga!" << endl;
+    }
+
+    return 0;
+}
